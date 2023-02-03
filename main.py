@@ -40,6 +40,9 @@ def get_merge_base(main_branch, head_commit):
         universal_newlines=True,
         shell=True,
     )
+    print(f"Git command: git merge-base origin/{main_branch} {head_commit}")
+    print(f"Stdout: {process.stdout}")
+    print(f"Return code: {process.returncode}")
     return process.stdout.replace("\n", "")
 
 
